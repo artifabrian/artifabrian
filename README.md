@@ -6,3 +6,4 @@
 
 <small>Last updated 2023-03-26.</small>
 
+Simplified & highly inspired by [Brett Cannon](https://github.com/brettcannon/brettcannon) version.
