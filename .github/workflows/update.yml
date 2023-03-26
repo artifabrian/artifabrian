@@ -26,7 +26,7 @@ jobs:
       - name: Update README.md
         run: pipenv run scrapper.py --username ${{ env.USERNAME }} > README.md
       - name: Commit changes
-        uses: artifabrian/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update README.md
           file_pattern: README.md
