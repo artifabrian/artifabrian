@@ -17,12 +17,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-          cache: "pip"
       - name: Install dependencies
         run: python -m pip install pipenv
       - name: Install dependencies 2
         run: |
-          pipenv instal
+          pipenv install
       - name: Update README.md
         run: pipenv run scrapper.py --username ${{ env.USERNAME }} > README.md
       - name: Commit changes
