@@ -75,8 +75,6 @@ def generate_readme(
 
 
 latest_blog_posts = get_latest_blog_posts(url)
-print(latest_blog_posts)
-
 
 async def main(
         username: str,
