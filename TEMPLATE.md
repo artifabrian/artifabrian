@@ -6,3 +6,4 @@
 
 <small>Last updated {{ today }}.</small>
 
+Simplified & highly inspired by [Brett Cannon](https://github.com/brettcannon/brettcannon) version.
