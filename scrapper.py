@@ -9,7 +9,7 @@ url = 'https://www.joaoleal.com/'
 
 
 def get_latest_blog_posts(url):
-    response = requests.get(url)
+    response = requests.get(url+'blog')
     if response.status_code != 200:
         raise ValueError(f"Failed to fetch page with status code {response.status_code}")
 
@@ -25,13 +25,13 @@ def get_latest_blog_posts(url):
 
     if len(blog_posts) >= 2:
         post_1 = blog_posts[0]
-        post_url_1 = post_1.find('a', class_='block-blog-list-item__content')['href']
+        post_url_1 = url+post_1.find('a', class_='block-blog-list-item__content')['href']
         post_title_1 = post_1.find('h3', class_='font-primary block-blog-list-item__title').text.strip()
         post_date_1 = datetime.datetime.strptime(
             post_1.find('p', class_='blog-list-item-meta__subtitle').find('span').text.strip(), '%m/%d/%Y')
 
         post_2 = blog_posts[1]
-        post_url_2 = post_2.find('a', class_='block-blog-list-item__content')['href']
+        post_url_2 = url+post_2.find('a', class_='block-blog-list-item__content')['href']
         post_title_2 = post_2.find('h3', class_='font-primary block-blog-list-item__title').text.strip()
         post_date_2 = datetime.datetime.strptime(
             post_2.find('p', class_='blog-list-item-meta__subtitle').find('span').text.strip(), '%m/%d/%Y')
@@ -74,14 +74,14 @@ def generate_readme(
     )
 
 
-latest_blog_posts = get_latest_blog_posts(url + '/blog')
+latest_blog_posts = get_latest_blog_posts(url)
 print(latest_blog_posts)
 
 
 async def main(
         username: str,
 ):
-    latest_blog_posts = get_latest_blog_posts(url + '/blog')
+    latest_blog_posts = get_latest_blog_posts(url)
 
     print(generate_readme(username,
                           latest_blog_posts['post_url_1'],
