@@ -4,6 +4,6 @@
   - [How Stable Diffusion, DALL-E 2 and MidJourney work?](https://www.joaoleal.com/how-stable-diffusion-dall-e-2-and-midjourney-work) published on 2022-11-13
   - [InstructGPT - The GPT-3 successor no one is talking about](https://www.joaoleal.com/blog-0) published on 2022-02-01
 
-<small>Last updated 2023-09-12.</small>
+<small>Last updated 2023-09-13.</small>
 
 Simplified & highly inspired by [Brett Cannon](https://github.com/brettcannon/brettcannon) version.
